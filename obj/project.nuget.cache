@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RyvHjp4DOaA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AFG\\Desktop\\.Net\\Github\\TaskTrackerCLI\\TaskTrackerCLI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AFG\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

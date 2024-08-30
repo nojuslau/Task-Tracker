@@ -1,0 +1,14 @@
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\bin\Debug\net8.0\TaskTrackerCLI.exe
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\bin\Debug\net8.0\TaskTrackerCLI.deps.json
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\bin\Debug\net8.0\TaskTrackerCLI.runtimeconfig.json
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\bin\Debug\net8.0\TaskTrackerCLI.dll
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\bin\Debug\net8.0\TaskTrackerCLI.pdb
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.AssemblyInfoInputs.cache
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.AssemblyInfo.cs
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.csproj.CoreCompileInputs.cache
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.dll
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\refint\TaskTrackerCLI.dll
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.pdb
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.genruntimeconfig.cache
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\ref\TaskTrackerCLI.dll
