@@ -11,44 +11,58 @@ class Program
             return;
         }
 
-        foreach (string arg in args)
+
+        if (args[0] == "--help")
         {
-            if (arg.Equals("help", StringComparison.OrdinalIgnoreCase))
+            Console.WriteLine("Help: This is a simple command-line program.");
+        }
+        else if (args[0] == "--version")
+        {
+            Console.WriteLine("Version 1.0.0");
+        }
+        else if (args[0] == "--add")
+        {
+            string options = args.ToString().Replace("--add ", "");
+        }
+        else if (args[0] == "--update")
+        {
+            string options = args.ToString().Replace("--update ", "");
+        }
+        else if (args[0] == "--delete")
+        {
+            string options = args.ToString().Replace("--delete ", "");
+        }
+        else if (args[0] == "--mark-in-progress")
+        {
+            string options = args.ToString().Replace("--mark-in-progress ", "");
+        }
+        else if (args[0] == "--mark-done")
+        {
+            string options = args.ToString().Replace("--mark-done ", "");
+        }
+        else if (args[0] == "--list" && args.Length < 3)
+        {
+
+            if (args.Length < 2)
             {
-                Console.WriteLine("Help: This is a simple command-line program.");
+
             }
-            else if (arg.Equals("version", StringComparison.OrdinalIgnoreCase))
+            else if (args[1] == "done")
             {
-                Console.WriteLine("Version 1.0.0");
+                
             }
-            else if (arg.StartsWith("add ", StringComparison.OrdinalIgnoreCase))
+            else if (args[1] == "todo")
             {
-                string name = arg.Substring("add ".Length);
+
             }
-            else if (arg.StartsWith("update ", StringComparison.OrdinalIgnoreCase))
+            else if (args[1] == "in-progress")
             {
-                string name = arg.Substring("update ".Length);
+                
             }
-            else if (arg.StartsWith("delete ", StringComparison.OrdinalIgnoreCase))
-            {
-                string name = arg.Substring("delete ".Length);
-            }
-            else if (arg.StartsWith("mark-in-progress ", StringComparison.OrdinalIgnoreCase))
-            {
-                string name = arg.Substring("mark-in-progress ".Length);
-            }
-            else if (arg.StartsWith("mark-done ", StringComparison.OrdinalIgnoreCase))
-            {
-                string name = arg.Substring("mark-done ".Length);
-            }
-            else if (arg.StartsWith("list ", StringComparison.OrdinalIgnoreCase))
-            {
-                string name = arg.Substring("list ".Length);
-            }
-            else
-            {
-                Console.WriteLine($"Unknown argument: {arg}");
-            }
+        }
+        else
+        {
+            Console.WriteLine($"Unknown argument: {args}");
         }
     }
 }

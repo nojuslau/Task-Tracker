@@ -12,3 +12,7 @@ C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\refint\TaskTrac
 C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.pdb
 C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.genruntimeconfig.cache
 C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\ref\TaskTrackerCLI.dll
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.csproj.AssemblyReference.cache
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrackerCLI.sourcelink.json
+C:\Users\AFG\Desktop\.Net\Github\TaskTrackerCLI\obj\Debug\net8.0\TaskTrac.DD8A29FF.Up2Date
