@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
 
 namespace TaskTrackerCLI.Repository;
@@ -15,12 +16,14 @@ public class Repository : IRepository
     {
         try
         {
-            List<Entities.Task> tasks = GetTasks();
+            var tasks = GetTasks() ?? new List<Entities.Task>();
             using StreamWriter file = File.CreateText(_repositoryFilePath);
-            tasks.Add(task);
+            {
+                tasks.Add(task);
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, tasks);
 
-            JsonSerializer serializer = new JsonSerializer();
-            serializer.Serialize(file, tasks);
+            }
         }
         catch (Exception e)
         {
@@ -33,9 +36,11 @@ public class Repository : IRepository
         try
         {
             using StreamReader file = File.OpenText(_repositoryFilePath);
-            JsonSerializer serializer = new JsonSerializer();
+            {
+                JsonSerializer serializer = new JsonSerializer();
 
-            return (List<Entities.Task>)serializer.Deserialize(file, typeof(List<Entities.Task>));
+                return (List<Entities.Task>)serializer.Deserialize(file, typeof(List<Entities.Task>));
+            }
         }
         catch (Exception e)
         {
@@ -46,35 +51,36 @@ public class Repository : IRepository
     public List<Entities.Task> GetTasksByStatus(int status)
     {
         List<Entities.Task> tasks = GetTasks();
-        var filteredTasks = from task in tasks
-                            where task.Status == status
-                            select task;
+        var filteredTasks = tasks.Where(task => task.Status == status).ToList();
 
-        return (List<Entities.Task>)filteredTasks;
+        return filteredTasks;
 
     }
 
-    public void DeleteTask(Entities.Task task)
+    public void DeleteTask(string id)
     {
         List<Entities.Task> tasks = GetTasks();
-        tasks.Remove(task);
-
-        using StreamWriter file = File.CreateText(_repositoryFilePath);
-        JsonSerializer serializer = new JsonSerializer();
-        serializer.Serialize(file, tasks);
-    }
-
-    public void UpdateTask(Entities.Task task)
-    {
-        List<Entities.Task> tasks = GetTasks();
-        var index = tasks.FindIndex(b => b.Id == task.Id);
-        if (index != -1)
+        Entities.Task? taskToDelete = tasks.Where(task => task.Id == id).FirstOrDefault();
+        if (taskToDelete == null)
         {
-            tasks[index] = task;
-        }
+            throw new Exception($"Task not found with id: {id}");
+        } 
+
+        tasks.Remove(taskToDelete);
 
         using StreamWriter file = File.CreateText(_repositoryFilePath);
-        JsonSerializer serializer = new JsonSerializer();
-        serializer.Serialize(file, tasks);
+        {
+            JsonSerializer serializer = new JsonSerializer();
+            serializer.Serialize(file, tasks);
+        }
+    }
+
+    public void UpdateTask(List<Entities.Task> tasksToUpdate)
+    {
+        using StreamWriter file = File.CreateText(_repositoryFilePath);
+        {
+            JsonSerializer serializer = new JsonSerializer();
+            serializer.Serialize(file, tasksToUpdate);
+        }
     }
 }
